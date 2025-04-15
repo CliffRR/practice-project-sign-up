@@ -16,10 +16,10 @@ app.use(
 console.log("checking root", process.env.REACT_APP_DB_USER);
 
 const db = mysql.createPool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
+    user: process.env.MYSQL_USER,
+    host: process.env.MYSQL_HOST,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
 });
 
 async function RegisteringNewAccount(username, password, req, res){
