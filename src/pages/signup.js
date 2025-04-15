@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 // import "../../App";
 
 
@@ -15,7 +15,7 @@ export default function Signup(){
     e.preventDefault();
 
     try {
-      const response = await Axios.post("http://localhost:3002/register/", 
+      const response = await axios.post("http://localhost:3002/register/", 
         {username: username, password: password},
         {withCredentials: true}
       );
